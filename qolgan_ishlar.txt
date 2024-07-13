@@ -1,0 +1,1 @@
+partnerlar qismidi PUT partner_title va partner_discriopni o'zgartirish kerak. validation xato bo'gan
