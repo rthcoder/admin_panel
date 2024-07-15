@@ -255,3 +255,9 @@ Use mongoose.model(name, schema)
 /api/v1/service__POST__1720786234567__AuthorizationError__Token is invalid
 /api/v1/service__POST__1720786236142__AuthorizationError__Token is invalid
 /api/v1/service__POST__1720786246751__AuthorizationError__jwt expired
+/api/v1/service__GET__1720868872021__AuthorizationError__Token is invalid
+/api/v1/service__GET__1720868872180__AuthorizationError__Token is invalid
+/api/v1/service__GET__1720868872302__AuthorizationError__Token is invalid
+/api/v1/service__GET__1720868872452__AuthorizationError__Token is invalid
+/api/v1/service__GET__1720868872589__AuthorizationError__Token is invalid
+/api/v1/service__GET__1720882522226__AuthorizationError__User is un authorized

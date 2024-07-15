@@ -48,6 +48,8 @@ const POST = async (req, res, next) => {
 
         let { service_title, about_service } = req.body
 
+        console.log(req.body);
+
         service_title = service_title?.trim()
         about_service = about_service?.trim()
 

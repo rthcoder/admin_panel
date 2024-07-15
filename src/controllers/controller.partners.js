@@ -152,14 +152,14 @@ const PUT = async (req, res, next) => {
         // }
 
 
-        if (partner_title.length > 25 || partner_title <= 3) {
+        if (partner_title && partner_title.length > 25 || partner_title <= 3) {
             return res.status(403).json({
                 message: "Invalid length for partner title.",
                 data: false
             })
         }
 
-        if (about_partner.length > 50 || about_partner <= 10) {
+        if (about_partner && about_partner.length > 50 || about_partner <= 10) {
             return res.status(403).json({
                 message: "Invalid length for description pertner.",
                 data: false
