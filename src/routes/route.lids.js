@@ -5,6 +5,6 @@ import checkToken from '../middlewares/checkToken.js'
 const router = Router()
 
 router.get('/api/v1/lids', checkToken, lids.GET)
-router.post('/api/v1/lids', checkToken, lids.POST)
+router.post('/api/v1/lids', lids.POST)
 
 export default router
