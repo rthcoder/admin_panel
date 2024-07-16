@@ -261,3 +261,6 @@ Use mongoose.model(name, schema)
 /api/v1/service__GET__1720868872452__AuthorizationError__Token is invalid
 /api/v1/service__GET__1720868872589__AuthorizationError__Token is invalid
 /api/v1/service__GET__1720882522226__AuthorizationError__User is un authorized
+/api/v1/staff__GET__1721107267720__AuthorizationError__Invalid database name: 'admin_panel/admin_panel'
+/api/v1/staff__GET__1721107288531__AuthorizationError__Invalid database name: 'admin_panel/admin_panel'
+/api/v1/staff__GET__1721107305463__AuthorizationError__jwt expired

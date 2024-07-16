@@ -230,6 +230,45 @@ const PUT = async (req, res, next) => {
         password = password?.trim()
         staff_role = staff_role?.trim()
 
+        if (staff_first_name && (staff_first_name.length > 20 || staff_first_name.length < 2)) {
+            return res.status(403).json({
+                message: "Invalid length for first name. Length of first name must be more then 2 and less then 15",
+                data: false
+            })
+        }
+
+        if (staff_last_name && (staff_last_name.length > 20 || staff_last_name.length < 2)) {
+            return res.status(403).json({
+                message: "Invalid length for last name. Length of last name must be more then 2 and less then 15",
+                data: false
+            })
+        }
+
+        const regexPhoneNumber = /^998[389][012345789][0-9]{7}$/
+        const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+
+        if (staff_phone_number && !(regexPhoneNumber.test(staff_phone_number))) {
+            return res.status(403).json({
+                message: "invalid phone number",
+                data: false
+            })
+        }
+
+        if (username && (username.length > 15 || username.length <= 2)) {
+            return res.status(403).json({
+                message: "Invalid length for username. Length of username must be more then 2 and less then 15",
+                data: false
+            })
+        }
+
+        if (password && !(regexPassword).test(password)) {
+            return res.status(403).json({
+                message: "invalid password. password must include capital and little letters, number and symbol",
+                data: false
+            })
+        }
+
+
         const staff = await Staff.findByIdAndUpdate(
             { _id: req.params.id },
             {
