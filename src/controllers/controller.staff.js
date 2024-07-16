@@ -9,7 +9,7 @@ const GET = async (req, res, next) => {
 
         if (req.params.staffid) {
 
-            const staff = await Staff.findById(req.params.staffid).select("-_id -__v")
+            const staff = await Staff.findById(req.params.staffid)
 
             if (!staff) {
                 return res.status(403).json({
@@ -27,7 +27,7 @@ const GET = async (req, res, next) => {
                 })
         }
 
-        const staffs = await Staff.find().select(['-_id staff_first_name']).select("-_id -__v")
+        const staffs = await Staff.find().select(['-_id staff_first_name'])
 
         return res
             .status(200)
