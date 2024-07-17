@@ -277,7 +277,7 @@ const PUT = async (req, res, next) => {
                     staff_last_name,
                     staff_phone_number,
                     username,
-                    password,
+                    password: sha256(password),
                     img,
                     staff_role
                 }
