@@ -102,17 +102,6 @@ const POST = async (req, res, next) => {
             })
         }
 
-
-
-        // if(!staff_role) {
-        //     return res.status(403).json({
-        //         message: "Role is required",
-        //         data: false
-        //     })
-        // }
-
-
-
         if (staff_first_name.length > 20 || staff_first_name.length < 2) {
             return res.status(403).json({
                 message: "Invalid length for first name. Length of first name must be more then 2 and less then 15",
