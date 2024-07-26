@@ -137,21 +137,6 @@ const PUT = async (req, res, next) => {
         partner_title = partner_title?.trim()
         about_partner = about_partner?.trim()
 
-        // if (!partner_title) {
-        //     return res.status(403).json({
-        //         message: "partner title is required.",
-        //         data: false
-        //     })
-        // }
-
-        // if (!about_partner) {
-        //     return res.status(403).json({
-        //         message: "about partner is required.",
-        //         data: false
-        //     })
-        // }
-
-
         if (partner_title && partner_title.length > 25 || partner_title <= 3) {
             return res.status(403).json({
                 message: "Invalid length for partner title.",
