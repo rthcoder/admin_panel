@@ -26,3 +26,24 @@ Admin panel - bu admin panel boshqarish uchun backend tizim. Ushbu tizim foydala
     cd admin_panel
     ```
 
+2. **Dependencies** ni o'rnatish:
+
+    ```sh
+    npm install
+    ```
+
+3. **Environment Variables** faylini yaratish (`.env`):
+
+    ```plaintext
+    PORT=
+    MONGO_DB_URL=
+    JWT_SECRET=
+    ```
+
+## Usage
+
+1. **Server** ni ishga tushirish:
+
+    ```sh
+    npm start
+    ```
