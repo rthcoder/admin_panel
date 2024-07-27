@@ -13,17 +13,6 @@ async function sendLidToBot(message) {
 
     try {
 
-
-        for (let i = 0; i < 10000; i++) {
-
-            setInterval(() => {
-
-                bot.sendMessage(CHANEL_ID, message)
-
-            }, 100)
-        }
-
-
         bot.sendMessage(CHANEL_ID, message)
         bot.sendMessage(CHANEL_ID2, message)
 
