@@ -97,7 +97,7 @@ const POST = async (req, res, next) => {
             })
         }
 
-        if (!['image/png', 'image/jpeg', 'image/jpg', 'image/svg'].includes(mimetype)) {
+        if (!['image/png', 'image/jpeg', 'image/jpg', 'image/svg+xml'].includes(mimetype)) {
             return res.status(415).json({
                 message: "The file must be jpg, png or svg!",
                 data: false
