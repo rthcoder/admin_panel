@@ -74,7 +74,7 @@ const POST = async (req, res, next) => {
             })
         }
 
-        if (about_service.length > 100 || about_service.length < 15) {
+        if (about_service.length > 10000 || about_service.length < 15) {
             return res.status(403).json({
                 message: "Invalid length for service description title. Length of service description must be more then 15 and less then 100",
                 data: false
@@ -97,9 +97,9 @@ const POST = async (req, res, next) => {
             })
         }
 
-        if (!['image/png', 'image/jpeg', 'image/jpg'].includes(mimetype)) {
+        if (!['image/png', 'image/jpeg', 'image/jpg', 'image/svg'].includes(mimetype)) {
             return res.status(415).json({
-                message: "The file must be jpg or png!",
+                message: "The file must be jpg, png or svg!",
                 data: false
             })
         }
